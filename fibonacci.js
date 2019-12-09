@@ -1,10 +1,10 @@
 function fibThis (num) {
-  if(seq.length === num) return "";
-  let seq = '1'
-  return seq = seq[num-(num)] + seq[num-(num-1)] + fibThis(num)
+  if(num <= 0) return 0;
+  if(num <= 2) return 1;
+  return fibThis(num-1) + fibThis(num-2)
 }
 
-console.log(fibThis(5))
+console.log(fibThis(11))
 
 // input: 5
 // output: 1, 1, 2, 3, 5,
@@ -14,5 +14,7 @@ console.log(fibThis(5))
 //
 // a + a
 // a + b
-//
-// input 
+
+//1 + 1 = 2
+//    1 + 2 = 3
+//        2 + 3 = 5
